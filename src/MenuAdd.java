@@ -43,22 +43,22 @@ public class MenuAdd extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel label = new JLabel("00식당 차림표 관리");
-		label.setFont(new Font("Serif", Font.PLAIN, 20));
+		label.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
 		label.setBounds(18, 6, 202, 25);
 		contentPane.add(label);
 		
 		JButton button_2 = new JButton("확인");
-		button_2.setFont(new Font("Serif", Font.PLAIN, 13));
+		button_2.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		button_2.setBounds(431, 18, 117, 29);
 		contentPane.add(button_2);
 		
 		JButton button = new JButton("추가");
-		button.setFont(new Font("Serif", Font.PLAIN, 13));
+		button.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		button.setBounds(431, 65, 117, 29);
 		contentPane.add(button);
 		
 		JButton button_1 = new JButton("삭제");
-		button_1.setFont(new Font("Serif", Font.PLAIN, 13));
+		button_1.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		button_1.setIcon(null);
 		button_1.setSelectedIcon(null);
 		button_1.setBackground(Color.red);
@@ -66,14 +66,14 @@ public class MenuAdd extends JFrame {
 		contentPane.add(button_1);
 		
 		JButton button_3 = new JButton("취소");
-		button_3.setFont(new Font("Serif", Font.PLAIN, 13));
+		button_3.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		button_3.setBounds(431, 150, 117, 29);
 		contentPane.add(button_3);
 		
 		tableMake = new TableData();
 		DefaultTableModel model = new DefaultTableModel(tableMake.contents,tableMake.header);
 		JTable mTable = new JTable(model);
-		mTable.setFont(new Font("Serif", Font.PLAIN, 12));
+		mTable.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		scrollpane = new JScrollPane(mTable);
 		scrollpane.setLocation(18, 35);
 		scrollpane.setSize(300, 300);

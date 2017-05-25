@@ -49,31 +49,31 @@ public class OrderView extends JFrame {
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
 		jlabel2 = new JLabel();
-		jlabel2.setFont(new Font("Serif", Font.PLAIN, 13));
+		jlabel2.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		jlabel2.setText("금액");
 		jlabel2.setBounds(17, 300, 52, 16);
 		contentPane.add(jlabel2);
 		JLabel label = new JLabel("주문 입력");
-		label.setFont(new Font("Serif", Font.PLAIN, 13));
+		label.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		label.setBounds(17, 21, 61, 16);
 		contentPane.add(label);
 		tableMake = new TableData();
 		DefaultTableModel model = new DefaultTableModel(tableMake.contents,tableMake.header);
 		JTable mTable = new JTable(model);
-		mTable.setFont(new Font("Serif", Font.PLAIN, 12));
+		mTable.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
 		scrollpane = new JScrollPane(mTable);
 		scrollpane.setSize(300, 191);
 		scrollpane.setLocation(17, 49);
 		contentPane.add(scrollpane);
 		
 		JLabel lblNewLabel = new JLabel("수량 선택");
-		lblNewLabel.setFont(new Font("Serif", Font.PLAIN, 13));
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		lblNewLabel.setBounds(17, 257, 61, 16);
 		contentPane.add(lblNewLabel);
 		
 		SpinnerNumberModel numberModel = new SpinnerNumberModel(1,0,500,1);
 		JSpinner spinner = new JSpinner(numberModel);
-		spinner.setFont(new Font("Serif", Font.PLAIN, 13));
+		spinner.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		spinner.addChangeListener(new ChangeListener() {
 	         public void stateChanged(ChangeEvent e) {
 	        	 jlabel2.setText("금액 : " 
@@ -85,12 +85,12 @@ public class OrderView extends JFrame {
 		
 		
 		JButton button = new JButton("확인");
-		button.setFont(new Font("Serif", Font.PLAIN, 13));
+		button.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		button.setBounds(399, 16, 117, 29);
 		contentPane.add(button);
 		
 		JButton button_1 = new JButton("취소");
-		button_1.setFont(new Font("Serif", Font.PLAIN, 13));
+		button_1.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		button_1.setBounds(399, 57, 117, 29);
 		contentPane.add(button_1);
 	}
