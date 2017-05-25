@@ -20,6 +20,7 @@ import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.RowSpec;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
+import java.awt.Font;
 
 public class LoginView extends JFrame {
 
@@ -56,19 +57,24 @@ public class LoginView extends JFrame {
 		contentPane.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		JLabel idLabel = new JLabel("ID");
+		idLabel.setFont(new Font("Serif", Font.PLAIN, 13));
 		contentPane.add(idLabel);
 		
 		textField = new JTextField();
+		textField.setFont(new Font("Serif", Font.PLAIN, 13));
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		JLabel passLabel = new JLabel("Password");
+		passLabel.setFont(new Font("Serif", Font.PLAIN, 13));
 		contentPane.add(passLabel);
 		
 		passwordField = new JPasswordField();
+		passwordField.setFont(new Font("Serif", Font.PLAIN, 13));
 		contentPane.add(passwordField);
 		
 		JButton btnNewButton = new JButton("로그인");
+		btnNewButton.setFont(new Font("Serif", Font.PLAIN, 13));
 		contentPane.add(btnNewButton);
 		
 		

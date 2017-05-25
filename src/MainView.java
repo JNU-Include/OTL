@@ -12,6 +12,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JEditorPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class MainView extends JFrame {
 
@@ -51,9 +52,11 @@ public class MainView extends JFrame {
 		contentPane.add(menuBar);
 		
 		JMenu mnNewMenu = new JMenu("식당관리 프로그램");
+		mnNewMenu.setFont(new Font("Serif", Font.PLAIN, 14));
 		menuBar.add(mnNewMenu);
 		
 		JMenuItem menuItem = new JMenuItem("출근");
+		menuItem.setFont(new Font("Serif", Font.PLAIN, 14));
 		menuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				login = new LoginView();
@@ -63,9 +66,11 @@ public class MainView extends JFrame {
 		mnNewMenu.add(menuItem);
 		
 		JMenuItem menuItem_2 = new JMenuItem("퇴근합니다");
+		menuItem_2.setFont(new Font("Serif", Font.PLAIN, 14));
 		mnNewMenu.add(menuItem_2);
 		
 		JMenuItem menuItem_6 = new JMenuItem("프로그램 종료");
+		menuItem_6.setFont(new Font("Serif", Font.PLAIN, 14));
 		menuItem_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
@@ -74,9 +79,11 @@ public class MainView extends JFrame {
 		mnNewMenu.add(menuItem_6);
 		
 		JMenu mnNewMenu_1 = new JMenu("차림표 관리");
+		mnNewMenu_1.setFont(new Font("Serif", Font.PLAIN, 14));
 		menuBar.add(mnNewMenu_1);
 		
 		JMenuItem menuItem_1 = new JMenuItem("차림표 경신");
+		menuItem_1.setFont(new Font("Serif", Font.PLAIN, 14));
 		menuItem_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				menuAdd = new MenuAdd();
@@ -87,27 +94,35 @@ public class MainView extends JFrame {
 		mnNewMenu_1.add(menuItem_1);
 		
 		JMenu menu = new JMenu("재고 관리");
+		menu.setFont(new Font("Serif", Font.PLAIN, 14));
 		menuBar.add(menu);
 		
 		JMenuItem menuItem_3 = new JMenuItem("재고 입력");
+		menuItem_3.setFont(new Font("Serif", Font.PLAIN, 14));
 		menu.add(menuItem_3);
 		
 		JMenu menu_1 = new JMenu("좌석 관리");
+		menu_1.setFont(new Font("Serif", Font.PLAIN, 14));
 		menuBar.add(menu_1);
 		
 		JMenuItem menuItem_4 = new JMenuItem("좌석 추가/삭제");
+		menuItem_4.setFont(new Font("Serif", Font.PLAIN, 14));
 		menu_1.add(menuItem_4);
 		
 		JMenuItem menuItem_5 = new JMenuItem("좌석 예약");
+		menuItem_5.setFont(new Font("Serif", Font.PLAIN, 14));
 		menu_1.add(menuItem_5);
 		
 		JMenu menu_2 = new JMenu("할인 관리");
+		menu_2.setFont(new Font("Serif", Font.PLAIN, 14));
 		menuBar.add(menu_2);
 		
 		JMenuItem mntmNewMenuItem = new JMenuItem("할인 경신");
+		mntmNewMenuItem.setFont(new Font("Serif", Font.PLAIN, 14));
 		menu_2.add(mntmNewMenuItem);
 		
 		JEditorPane editorPane = new JEditorPane();
+		editorPane.setFont(new Font("Serif", Font.PLAIN, 13));
 		editorPane.setText("좌석 1");
 		editorPane.setBounds(32, 125, 146, 71);
 		contentPane.add(editorPane);
