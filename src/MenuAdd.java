@@ -82,7 +82,5 @@ public class MenuAdd extends JFrame {
 		MenuAdd frame = new MenuAdd();
 		frame.setVisible(true);
 	}
-	public JPanel getContentPane() {
-		return contentPane;
-	}
+	
 }

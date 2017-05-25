@@ -12,10 +12,10 @@ public class TableData {
 			{"소주","3500"}								
 	};
 	
-	public void makeTable(){
-	DefaultTableModel model = new DefaultTableModel(contents,header);
-	JTable mTable = new JTable(model);
-	scrollpane = new JScrollPane(mTable);
-	
-	}
+//	public void makeTable(){
+//	DefaultTableModel model = new DefaultTableModel(contents,header);
+//	JTable mTable = new JTable(model);
+//	scrollpane = new JScrollPane(mTable);
+//	
+//	}
 }
