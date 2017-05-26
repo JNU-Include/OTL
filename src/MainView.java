@@ -1,24 +1,19 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+package 원형화;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import java.awt.*;
+
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JButton;
-import javax.swing.JTextPane;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.JEditorPane;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.Font;
 
 public class MainView extends JFrame {
 
 	private JPanel contentPane;
 	private LoginView login;
 	private MenuAdd menuAdd;
+	private OrderView orderView;
 
 	/**
 	 * Launch the application.
@@ -121,11 +116,18 @@ public class MainView extends JFrame {
 		mntmNewMenuItem.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
 		menu_2.add(mntmNewMenuItem);
 		
-		JEditorPane editorPane = new JEditorPane();
-		editorPane.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		editorPane.setText("좌석 1");
-		editorPane.setBounds(32, 125, 146, 71);
-		contentPane.add(editorPane);
+		JButton tableButton = new JButton();
+		tableButton.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
+		tableButton.setText("좌석 1");
+		tableButton.setBounds(32, 125, 146, 71);
+		contentPane.add(tableButton);
+		tableButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				orderView = new OrderView();
+				orderView.run();
+				
+			}
+		});
 		
 	}
 }

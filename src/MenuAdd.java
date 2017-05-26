@@ -1,14 +1,9 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+package 원형화;
+
+import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.border.EmptyBorder;
-
-import java.awt.Font;
-import java.awt.Color;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.SystemColor;
 
 public class MenuAdd extends JFrame {
 

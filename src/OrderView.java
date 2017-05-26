@@ -1,19 +1,11 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+package 원형화;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
+import java.awt.*;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.JLabel;
-import javax.swing.JSpinner;
-import javax.swing.JButton;
-import javax.swing.SpinnerNumberModel;
-import java.awt.Font;
 
 public class OrderView extends JFrame {
 	private JPanel contentPane;
@@ -93,5 +85,11 @@ public class OrderView extends JFrame {
 		button_1.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		button_1.setBounds(399, 57, 117, 29);
 		contentPane.add(button_1);
+	}
+	
+	public void run()
+	{
+		OrderView frame = new OrderView();
+		frame.setVisible(true);
 	}
 }

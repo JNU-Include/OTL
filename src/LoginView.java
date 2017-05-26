@@ -1,26 +1,8 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+package 원형화;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import java.awt.*;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import java.awt.GridLayout;
-import javax.swing.JLabel;
-import javax.swing.JToolBar;
-import javax.swing.JTextField;
-import javax.swing.JPasswordField;
-import java.awt.Component;
-import javax.swing.Box;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.FormSpecs;
-import com.jgoodies.forms.layout.RowSpec;
-import javax.swing.SwingConstants;
-import javax.swing.JButton;
-import java.awt.Font;
 
 public class LoginView extends JFrame {
 
