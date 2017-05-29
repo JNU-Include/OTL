@@ -1,11 +1,9 @@
-package 원형화;
-
 import javax.swing.*;
 
 public class TableData {
 	private JScrollPane scrollpane;
 	
-	String header[] = {"음식명","가격"};
+	String header[] = {"음식명","수량"};
 	String contents[][] = {
 			{"삼겹살","11000"},
 			{"대패삼겹살","3000"},
