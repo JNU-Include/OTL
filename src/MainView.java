@@ -1,5 +1,3 @@
-package 원형화;
-
 import java.awt.*;
 
 import javax.swing.*;
@@ -95,6 +93,13 @@ public class MainView extends JFrame {
 		JMenuItem menuItem_3 = new JMenuItem("재고 입력");
 		menuItem_3.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
 		menu.add(menuItem_3);
+		menuItem_3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent actionEvent) {
+				stock_manage sm = new stock_manage();
+				sm.run();
+			}
+		});
 		
 		JMenu menu_1 = new JMenu("좌석 관리");
 		menu_1.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
@@ -121,6 +126,7 @@ public class MainView extends JFrame {
 		tableButton.setText("좌석 1");
 		tableButton.setBounds(32, 125, 146, 71);
 		contentPane.add(tableButton);
+
 		tableButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				orderView = new OrderView();
