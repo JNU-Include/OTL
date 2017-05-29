@@ -2,24 +2,16 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by voidbluelabtop on 17. 5. 29.
  */
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.border.EmptyBorder;
-
-
-
-public class stock_manage extends JFrame{
-
+public class discount_manage extends JFrame{
     private JPanel contentPane;
     private JScrollPane scrollpane;
-    private StockData StockData;
+    private DiscountData DiscountData;
     /**
      * Launch the application.
      */
@@ -39,7 +31,7 @@ public class stock_manage extends JFrame{
     /**
      * Create the frame.
      */
-    public stock_manage() {
+    public discount_manage() {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(100, 100, 554, 384);
         contentPane = new JPanel();
@@ -47,7 +39,7 @@ public class stock_manage extends JFrame{
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        JLabel label = new JLabel("00식당 재고 관리");
+        JLabel label = new JLabel("00식당 할인 관리");
         label.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
         label.setBounds(18, 6, 202, 25);
         contentPane.add(label);
@@ -63,22 +55,10 @@ public class stock_manage extends JFrame{
             }
         });
 
-        JButton button = new JButton("추가");
-        button.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-        button.setBounds(431, 65, 117, 29);
-        contentPane.add(button);
-
-        JButton button_1 = new JButton("삭제");
-        button_1.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-        button_1.setIcon(null);
-        button_1.setSelectedIcon(null);
-        button_1.setBackground(Color.red);
-        button_1.setBounds(431, 109, 117, 29);
-        contentPane.add(button_1);
 
 
-        StockData = new StockData();
-        DefaultTableModel model = new DefaultTableModel(StockData.contents,StockData.header);
+        DiscountData = new DiscountData();
+        DefaultTableModel model = new DefaultTableModel(DiscountData.contents,DiscountData.header);
         JTable mTable = new JTable(model);
         mTable.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
         scrollpane = new JScrollPane(mTable);
@@ -91,7 +71,7 @@ public class stock_manage extends JFrame{
 
     public void run()
     {
-        stock_manage frame = new stock_manage();
+        discount_manage frame = new discount_manage();
         frame.setVisible(true);
     }
 

@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.border.EmptyBorder;
@@ -44,7 +46,14 @@ public class MenuAdd extends JFrame {
 		button_2.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		button_2.setBounds(431, 18, 117, 29);
 		contentPane.add(button_2);
-		
+		button_2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent actionEvent) {
+				dispose();
+			}
+		});
+
+
 		JButton button = new JButton("추가");
 		button.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		button.setBounds(431, 65, 117, 29);
