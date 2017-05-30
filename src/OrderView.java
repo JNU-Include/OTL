@@ -152,8 +152,6 @@ public class OrderView extends JFrame {
 			ordered_food.setBounds(17, 340 + 20 * i , 200 , 16);
 			add(ordered_food);
 		}
-
-
 	}
 	private void renew(){
 		DefaultTableModel order_model = new DefaultTableModel(tableMake.orderlist, tableMake.order_header);
