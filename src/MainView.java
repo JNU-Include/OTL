@@ -196,7 +196,7 @@ public class MainView extends JFrame {
 		tableButton3.setBounds(32, 275, 146, 71);
 		contentPane.add(tableButton3);
 
-		tableButton.addActionListener(new ActionListener() {
+		tableButton3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				orderView = new OrderView();
 				orderView.run();
