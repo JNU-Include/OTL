@@ -13,7 +13,7 @@ public class OrderView extends JFrame {
 	private TableData tableMake;
 	private JScrollPane scrollpane;
 	private JLabel jlabel2;
-	private ArrayList orderlist;
+//	private String[][] orderarray;
 	DefaultTableModel order_model;
 	int order_num;
 	/**
@@ -36,7 +36,6 @@ public class OrderView extends JFrame {
 	 * Create the frame.
 	 */
 	public OrderView() {
-		orderlist = new ArrayList();
 		order_num = 1;
 
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -52,7 +51,9 @@ public class OrderView extends JFrame {
 		label.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		label.setBounds(17, 21, 61, 16);
 		contentPane.add(label);
+
 		tableMake = new TableData();
+
 		DefaultTableModel model = new DefaultTableModel(tableMake.contents,tableMake.header);
 		JTable mTable = new JTable(model);
 		mTable.setFont(new Font("Lucida Grande", Font.PLAIN, 12));
@@ -74,11 +75,23 @@ public class OrderView extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 				int row = mTable.getSelectedRow();
-				tableMake.order[0] = tableMake.contents[row][0];
-				tableMake.order[1] = Integer.toString(order_num);
-				tableMake.order[2] =  Integer.toString(Integer.parseInt(tableMake.contents[row][1]) *order_num);
+				boolean isin = false;
+				for (int i = 0 ; i < tableMake.orderlist.length; i++){
+					if (tableMake.orderlist[i][0].equals(tableMake.contents[row][0])){
+						isin = true;
+						tableMake.ordered_contents.get(i)[1] = Integer.toString(Integer.parseInt(tableMake.ordered_contents.get(i)[1]) + order_num);
+						tableMake.ordered_contents.get(i)[2] = Integer.toString(Integer.parseInt(tableMake.contents[row][1])
+																				* Integer.parseInt(tableMake.ordered_contents.get(i)[1]));
 
-				tableMake.ordered_contents.add(tableMake.order.clone());
+					}
+				}
+				if (!isin) {
+					tableMake.order[0] = tableMake.contents[row][0];
+					tableMake.order[1] = Integer.toString(order_num);
+					tableMake.order[2] = Integer.toString(Integer.parseInt(tableMake.contents[row][1]) * order_num);
+					tableMake.ordered_contents.add(tableMake.order.clone());
+				}
+
 				tableMake.list_init();
 				renew();
 			}
@@ -139,8 +152,6 @@ public class OrderView extends JFrame {
 			ordered_food.setBounds(17, 340 + 20 * i , 200 , 16);
 			add(ordered_food);
 		}
-
-
 	}
 	private void renew(){
 		DefaultTableModel order_model = new DefaultTableModel(tableMake.orderlist, tableMake.order_header);

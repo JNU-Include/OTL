@@ -14,7 +14,7 @@ public class TableData {
 	String order_header[] = {"음식명", "수량", "가격"};
 
 	TableData(){
-
+		orderlist = new String[0][0];
 	}
 
 	ArrayList<String[]> ordered_contents = new ArrayList();

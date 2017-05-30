@@ -16,7 +16,7 @@ public class Table_Reserve extends JFrame {
         isReserved2 = false;
         isReserved3 = false;
 
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(100, 100, 616, 420);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -77,6 +77,30 @@ public class Table_Reserve extends JFrame {
                 else{
                     tableButton3.setBackground(Color.gray);
                 }
+            }
+        });
+
+        JButton accept = new JButton();
+        accept.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
+        accept.setText("확인");
+        accept.setBounds(500, 270, 60, 40);
+        contentPane.add(accept);
+        accept.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                dispose();
+            }
+        });
+
+        JButton cancel = new JButton();
+        cancel.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
+        cancel.setText("취소");
+        cancel.setBounds(500, 320, 60, 40);
+        contentPane.add(cancel);
+        cancel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                dispose();
             }
         });
     }
